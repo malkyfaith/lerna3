@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "lerna run test --scope={'@hub/package-one','@hub/package-two'}",
-    "new-version": "lerna version --conventional-commits --yes"
+    "test-since": "lerna run test --since",
+    "new-version": "lerna version --conventional-commits --yes",
+    "test-2": "lerna run test --scope"
   },
   "name": "lerna3"
 }
