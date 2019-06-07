@@ -7,10 +7,16 @@
     "lerna": "^3.14.1"
   },
   "scripts": {
-    "test": "lerna run test --scope={'@hub/package-one','@hub/package-two'}",
-    "test-since": "lerna run test --since --parallel",
+    "test": "lerna run test",
+    "test-scope": "lerna run test --scope='@hub/package-one'",
+    "test-since": "lerna run test --since",
     "new-version": "lerna version --conventional-commits --yes",
-    "test-2": "lerna run test --scope"
+    "test-2": "lerna run test --scope",
+    "changed": "lerna changed",
+    "ls-al": "lerna exec -- ls -la",
+    "test-scope-changed": "lerna exec -- yarn run changed",
+    "test-sh": "lerna exec -- /bin/sh \\$LERNA_ROOT_PATH/scripts/test.sh"
+    
   },
   "name": "lerna3"
 }
